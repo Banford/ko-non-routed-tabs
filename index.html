@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Knockout Non-Routed Tabs</h1>
+
+    <p>Summary:</p>
+    <ul>
+        <li>Does not use the bootstrap JavaScript or jQuery.</li>
+        <li>Each 'tab-content' panel is a knockout component.</li>
+        <li>Selected tab is an observable on the 'pb-ko-tabs' viewModel.</li>
+        <li>The viewModel for a tab will be constructed each time the tab is switched to.</li>
+        <li>The tabs have to use the containerless control flow comment binding syntax.</li>
+        <li>Uses $componentTemplateNodes to render the child nodes of 'pb-ko-tabs'.</li>
+    </ul>
+
+    <h2>Basic Usage</h2>
+    <pb-ko-tabs>
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'basic', label: 'Basic' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'address', label: 'Address' } } --><!-- /ko -->
+    </pb-ko-tabs>
+
+    <h2>Disabled Tabs</h2>
+    <p>
+        It's possible to add tabs and not specify a key for the component they are supposed to load.
+        In this case the tabs will be rendered as disabled links and clicking them will not attempt to switch tab.
+    </p>
+
+    <pb-ko-tabs>
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'address', label: 'Address' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'basic', label: 'Basic' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { label: 'New Tab' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { label: 'Another Tab' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { label: 'Another Tab Again' } } --><!-- /ko -->
+    </pb-ko-tabs>
+
+  </div>
+
+    <script src="bower_components/knockout/dist/knockout.debug.js"></script>
+    <script src="src/pb-ko-tabs.js"></script>
+    <script src="viewmodel.js"></script>
+</body>
+</html>

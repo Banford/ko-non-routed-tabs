@@ -1,0 +1,17 @@
+{
+  "name": "pb-ko-tabs",
+  "version": "0.0.1",
+  "description": "KnockoutJS component to wrap Bootstrap tabs.",
+  "main": "viewmodel.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Nick Banford <nickbanford@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
