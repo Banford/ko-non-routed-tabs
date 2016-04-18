@@ -1,6 +1,7 @@
 ko.components.register('pb-ko-tabs', {
     viewModel: function(params) {
-        this.selectedTabKey = ko.observable('basic');
+        
+        this.selectedTabKey = ko.observable(params && params.selectedTabKey || 'basic');
 
         this.selectedTabComponentName = ko.computed(function(){
             if(this.selectedTabKey() === undefined) return 'empty-tab-pane';
