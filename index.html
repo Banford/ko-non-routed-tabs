@@ -21,6 +21,12 @@
         <!-- ko component: { name: 'pb-ko-tab', params: { key: 'basic', label: 'Basic' } } --><!-- /ko -->
         <!-- ko component: { name: 'pb-ko-tab', params: { key: 'address', label: 'Address' } } --><!-- /ko -->
     </pb-ko-tabs>
+		
+    <h2>Basic Usage with given selected tab in params</h2>
+    <pb-ko-tabs params="selectedTabKey: 'address'">
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'basic', label: 'Basic' } } --><!-- /ko -->
+        <!-- ko component: { name: 'pb-ko-tab', params: { key: 'address', label: 'Address' } } --><!-- /ko -->
+    </pb-ko-tabs>
 
     <h2>Disabled Tabs</h2>
     <p>
